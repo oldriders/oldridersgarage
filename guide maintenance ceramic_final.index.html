@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Ceramic Coating Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+        }
+        
+        .ebook-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,107,53,0.3) 0%, rgba(247,147,30,0.2) 50%, rgba(255,107,53,0.3) 100%);
+            animation: shimmer 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes shimmer {
+            0% { opacity: 0.7; }
+            100% { opacity: 0.3; }
+        }
+        
+        .cover-content {
+            z-index: 3;
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cover h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            letter-spacing: -2px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e, #ffdd59);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255,107,53,0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(255,107,53,0.8)); }
+        }
+        
+        .cover .subtitle {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .cover .description {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+        
+        .brand {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .brand:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,107,53,0.6);
+        }
+        
+        /* Page Styles */
+        .page {
+            min-height: 100vh;
+            padding: 60px 40px;
+            page-break-after: always;
+        }
+        
+        .page h2 {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 15px;
+        }
+        
+        .page h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 30px 0 20px;
+        }
+        
+        .page p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: #f8f9fa;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateX(10px);
+        }
+        
+        .toc-title {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .toc-page {
+            color: #ff6b35;
+            font-weight: bold;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #ff6b35;
+            border-radius: 25px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .language-toggle button {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .language-toggle button.active {
+            background: white;
+            color: #ff6b35;
+        }
+        
+        /* Warning Box */
+        .warning {
+            background: linear-gradient(135deg, #ff4757, #ff6b7a);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ff3742;
+        }
+        
+        .warning::before {
+            content: "⚠️";
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Success Box */
+        .success {
+            background: linear-gradient(135deg, #2ed573, #7bed9f);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #2ed573;
+        }
+        
+        .success::before {
+            content: "✅";
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Step Lists */
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .step-list li::before {
+            content: "Step " counter(step-counter);
+            background: #ff6b35;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-right: 15px;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            color: #ff6b35;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile Service Highlight */
+        .mobile-service-highlight {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 15px 30px rgba(255,107,53,0.3);
+        }
+
+        .mobile-service-highlight h3 {
+            color: white !important;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .mobile-service-highlight p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .mobile-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .mobile-benefit {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-benefit:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Charts and Investment Analysis Styles */
+        .chart-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .chart-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .cost-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chart-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .chart-label {
+            min-width: 200px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .chart-bar {
+            flex: 1;
+            height: 50px;
+            background: #e9ecef;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 25px;
+            transition: width 2s ease-in-out;
+            position: relative;
+        }
+
+        .chart-bar.traditional .bar-fill {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            width: 100%;
+            animation: fillBar 2s ease-in-out;
+        }
+
+        .chart-bar.ceramic .bar-fill {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            width: 51%;
+            animation: fillBar 2s ease-in-out 0.5s both;
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+
+        .bar-value {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .savings-highlight {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .savings-amount {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .savings-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Time Comparison */
+        .time-chart {
+            text-align: center;
+        }
+
+        .time-comparison {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .time-block {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+
+        .traditional-time {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .ceramic-time {
+            border-left: 5px solid #27ae60;
+        }
+
+        .time-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .time-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .time-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .vs-divider {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ff6b35;
+            background: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .time-savings {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* Protection Comparison */
+        .protection-comparison {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .protection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .protection-item h4 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .protection-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .protection-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .protection-bar span:first-child {
+            min-width: 120px;
+            font-weight: 600;
+        }
+
+        .bar-bg {
+            flex: 1;
+            height: 25px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .bar-progress {
+            height: 100%;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            border-radius: 15px;
+            transition: width 2s ease-in-out;
+        }
+
+        .bar-progress.ceramic {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+        }
+
+        .protection-bar span:last-child {
+            min-width: 60px;
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* ROI Calculator */
+        .roi-calculator {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .roi-calculator h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .roi-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .roi-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .roi-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .roi-item.highlight {
+            background: rgba(255,107,53,0.3);
+            border: 2px solid rgba(255,107,53,0.5);
+        }
+
+        .roi-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .roi-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .roi-value {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        /* Language Toggle Fixed */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Responsive adjustments for charts */
+        @media (max-width: 768px) {
+            .time-comparison {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .vs-divider {
+                transform: rotate(90deg);
+            }
+
+            .chart-bar-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .chart-label {
+                min-width: auto;
+            }
+
+            .cover h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cover .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .page {
+                padding: 40px 20px;
+            }
+            
+            .page h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .language-toggle {
+                display: none;
+            }
+            
+            .page {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-toggle">
+        <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+        <button onclick="switchLanguage('fr')" id="btn-fr">Français</button>
+    </div>
+
+    <div class="ebook-container">
+        <!-- COVER PAGE -->
+        <div class="cover">
+            <div class="cover-content">
+                <h1>MOTORCYCLE CERAMIC COATING</h1>
+                
+                <div class="lang-content active" id="subtitle-en">
+                    <div class="subtitle">The Ultimate Guide to Protection & Aesthetics</div>
+                    <div class="description">Transform your motorcycle maintenance experience with nano-ceramic technology<br><span style="font-size: 1.1rem; color: #ffdd59;">🚐 Mobile Service Available - We Come to You!</span></div>
+                </div>
+                
+                <div class="lang-content" id="subtitle-fr">
+                    <div class="subtitle">Le Guide Ultime de Protection & Esthétique</div>
+                    <div class="description">Transformez votre expérience d'entretien moto avec la technologie nano-céramique<br><span style="font-size: 1.1rem; color: #ffdd59;">🚐 Service Mobile Disponible - Nous Venons Chez Vous !</span></div>
+                </div>
+                
+                <div class="brand">OLD RIDER'S GARAGE</div>
+            </div>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="page toc">
+            <div class="lang-content active" id="toc-en">
+                <h2>Table of Contents</h2>
+                <ul class="toc-list">
+                    <li class="toc-item" onclick="scrollToSection('intro')">
+                        <span class="toc-title">Introduction to Ceramic Coating</span>
+                        <span class="toc-page">3</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('curing')">
+                        <span class="toc-title">Curing Time</span>
+                        <span class="toc-page">4</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('tools')">
+                        <span class="toc-title">Recommended Tools and Materials</span>
+                        <span class="toc-page">5</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('washing')">
+                        <span class="toc-title">Proper Washing Technique</span>
+                        <span class="toc-page">6</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('drying')">
+                        <span class="toc-title">Drying Methods</span>
+                        <span class="toc-page">7</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('avoid')">
+                        <span class="toc-title">Products to Absolutely Avoid</span>
+                        <span class="toc-page">8</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('inspection')">
+                        <span class="toc-title">Weekly Inspection</span>
+                        <span class="toc-page">9</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('benefits')">
+                        <span class="toc-title">Benefits of Ceramic Coating</span>
+                        <span class="toc-page">10</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('investment')">
+                        <span class="toc-title">Investment Analysis & ROI</span>
+                        <span class="toc-page">11</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('tips')">
+                        <span class="toc-title">Expert Tips</span>
+                        <span class="toc-page">12</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('contact')">
+                        <span class="toc-title">Contact and Services</span>
+                        <span class="toc-page">13</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lang-content" id="toc-fr">
+                <h2>Table des Matières</h2>
+                <ul class="toc-list">
+                    <li class="toc-item" onclick="scrollToSection('intro')">
+                        <span class="toc-title">Introduction au Traitement Céramique</span>
+                        <span class="toc-page">3</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('curing')">
+                        <span class="toc-title">Temps de Durcissement</span>
+                        <span class="toc-page">4</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('tools')">
+                        <span class="toc-title">Outils et Matériaux Recommandés</span>
+                        <span class="toc-page">5</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('washing')">
+                        <span class="toc-title">Technique de Lavage Appropriée</span>
+                        <span class="toc-page">6</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('drying')">
+                        <span class="toc-title">Méthodes de Séchage</span>
+                        <span class="toc-page">7</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('avoid')">
+                        <span class="toc-title">Produits à Éviter Absolument</span>
+                        <span class="toc-page">8</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('inspection')">
+                        <span class="toc-title">Inspection Hebdomadaire</span>
+                        <span class="toc-page">9</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('benefits')">
+                        <span class="toc-title">Avantages du Traitement Céramique</span>
+                        <span class="toc-page">10</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('investment')">
+                        <span class="toc-title">Analyse d'Investissement & ROI</span>
+                        <span class="toc-page">11</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('tips')">
+                        <span class="toc-title">Conseils d'Expert</span>
+                        <span class="toc-page">12</span>
+                    </li>
+                    <li class="toc-item" onclick="scrollToSection('contact')">
+                        <span class="toc-title">Contact et Services</span>
+                        <span class="toc-page">13</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INTRODUCTION -->
+        <div class="page" id="intro">
+            <div class="lang-content active" id="intro-en">
+                <h2>Introduction to Ceramic Coating</h2>
+                <p>Nano ceramic coating represents one of the most significant innovations in vehicle protection technology. This cutting-edge technology literally transforms how you maintain your motorcycle, creating an invisible protective barrier that revolutionizes the maintenance experience.</p>
+                
+                <h3>What is Ceramic Coating?</h3>
+                <p>Ceramic coating is a liquid solution that, when applied to your motorcycle's surface, forms a permanent protective layer at the molecular level. This layer, only a few microns thick, creates a transparent shield that chemically bonds to the paint, chrome, and other surfaces of your vehicle.</p>
+                
+                <h3>Why Choose Our Nano Ceramic?</h3>
+                <p>The investment in ceramic coating goes far beyond aesthetics. This technology offers comprehensive protection against the most aggressive environmental elements. The sun's ultraviolet rays, responsible for paint fading and oxidation, are effectively blocked by the ceramic barrier.</p>
+                
+                <p>Nano ceramic also transforms the cleaning experience. Thanks to its exceptional hydrophobic properties, water beads and naturally slides off the surface, carrying away dirt, dust, and even insect residue.</p>
+            </div>
+
+            <div class="lang-content" id="intro-fr">
+                <h2>Introduction au Traitement Céramique</h2>
+                <p>Le traitement nano-céramique représente l'une des innovations les plus significatives dans le domaine de la protection des véhicules. Cette technologie de pointe transforme littéralement la façon dont vous entretenez votre moto, en créant une barrière protectrice invisible qui révolutionne l'expérience de maintenance.</p>
+                
+                <h3>Qu'est-ce que le Traitement Céramique ?</h3>
+                <p>Le revêtement céramique est une solution liquide qui, une fois appliquée sur la surface de votre moto, forme une couche protectrice permanente au niveau moléculaire. Cette couche, d'une épaisseur de quelques microns seulement, crée un bouclier transparent qui adhère chimiquement à la peinture, au chrome et aux autres surfaces de votre véhicule.</p>
+                
+                <h3>Pourquoi Choisir Notre Nano-Céramique ?</h3>
+                <p>L'investissement dans un traitement céramique va bien au-delà de l'esthétique. Cette technologie offre une protection complète contre les éléments les plus agressifs de l'environnement. Les rayons ultraviolets du soleil, responsables de la décoloration et de l'oxydation de la peinture, sont efficacement bloqués par la barrière céramique.</p>
+                
+                <p>La nano-céramique transforme également l'expérience de nettoyage. Grâce à ses propriétés hydrophobes exceptionnelles, l'eau perle et glisse naturellement sur la surface, emportant avec elle la saleté, la poussière et même les résidus d'insectes.</p>
+            </div>
+        </div>
+
+        <!-- CURING TIME -->
+        <div class="page" id="curing">
+            <div class="lang-content active" id="curing-en">
+                <h2>Curing Time</h2>
+                <div class="warning">
+                    <strong>Critical 24-Hour Period</strong><br>
+                    The ceramic coating curing process constitutes the most crucial step in ensuring optimal effectiveness of your investment. During the first 24 hours following application, the ceramic layer undergoes a polymerization phase where molecules chemically bond to your motorcycle's surface.
+                </div>
+                
+                <h3>Essential Precautions</h3>
+                <ul class="step-list">
+                    <li><strong>Avoid water exposure:</strong> Any exposure to moisture, whether rain, dew, or washing, can interrupt the polymerization process and permanently compromise the coating's integrity.</li>
+                    <li><strong>Control temperature:</strong> Extreme temperature variations can also affect the curing process. Ideally, ambient temperature should be between 15°C and 25°C (59°F to 77°F).</li>
+                </ul>
+            </div>
+
+            <div class="lang-content" id="curing-fr">
+                <h2>Temps de Durcissement</h2>
+                <div class="warning">
+                    <strong>Période Critique de 24 Heures</strong><br>
+                    Le processus de durcissement du revêtement céramique constitue l'étape la plus cruciale pour garantir l'efficacité optimale de votre investissement. Durant les premières 24 heures suivant l'application, la couche céramique traverse une phase de polymérisation où les molécules se lient chimiquement à la surface de votre moto.
+                </div>
+                
+                <h3>Précautions Essentielles</h3>
+                <ul class="step-list">
+                    <li><strong>Éviter l'exposition à l'eau :</strong> Toute exposition à l'humidité, qu'il s'agisse de pluie, de rosée ou de lavage, peut interrompre le processus de polymérisation et compromettre définitivement l'intégrité du revêtement.</li>
+                    <li><strong>Contrôler la température :</strong> Les variations extrêmes de température peuvent également affecter le processus de durcissement. Idéalement, la température ambiante devrait se situer entre 15°C et 25°C.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TOOLS AND MATERIALS -->
+        <div class="page" id="tools">
+            <div class="lang-content active" id="tools-en">
+                <h2>Recommended Tools and Materials</h2>
+                <h3>Essential Basic Kit</h3>
+                <p>Effective maintenance of a nano ceramic coated motorcycle requires specialized equipment. Each tool plays a specific role in preserving coating integrity.</p>
+                
+                <div class="success">
+                    <strong>Premium Microfiber Towels</strong><br>
+                    Recommended quantity: Minimum 6 high-quality towels<br>
+                    - 3 for washing: 300-400 GSM density<br>
+                    - 3 for drying: 500-600 GSM density<br>
+                    - Characteristics: Split fibers, no visible seams, machine washable
+                </div>
+                
+                <div class="success">
+                    <strong>Two-Bucket Washing System</strong><br>
+                    - Bucket 1: 15-20 liters for shampoo solution<br>
+                    - Bucket 2: 15-20 liters for rinsing<br>
+                    - Grit guards: Placed at the bottom of each bucket
+                </div>
+                
+                <div class="success">
+                    <strong>Specialized Automotive Shampoo</strong><br>
+                    - Neutral pH: Between 6.0 and 7.0<br>
+                    - Wax and silicone-free<br>
+                    - Concentrated formulation: 1:10 to 1:20 ratio<br>
+                    - Biodegradable
+                </div>
+            </div>
+
+            <div class="lang-content" id="tools-fr">
+                <h2>Outils et Matériaux Recommandés</h2>
+                <h3>Kit de Base Essentiel</h3>
+                <p>L'entretien efficace d'une moto traitée à la nano-céramique nécessite un équipement spécialisé. Chaque outil joue un rôle spécifique dans la préservation de l'intégrité du revêtement.</p>
+                
+                <div class="success">
+                    <strong>Serviettes en Microfibre Premium</strong><br>
+                    Quantité recommandée : Minimum 6 serviettes de haute qualité<br>
+                    - 3 pour le lavage : Densité de 300-400 GSM<br>
+                    - 3 pour le séchage : Densité de 500-600 GSM<br>
+                    - Caractéristiques : Fibres split, sans coutures apparentes, lavables en machine
+                </div>
+                
+                <div class="success">
+                    <strong>Système de Lavage à Deux Seaux</strong><br>
+                    - Seau 1 : 15-20 litres pour la solution de shampoing<br>
+                    - Seau 2 : 15-20 litres pour le rinçage<br>
+                    - Grilles de protection : Placées au fond de chaque seau
+                </div>
+                
+                <div class="success">
+                    <strong>Shampoing Automobile Spécialisé</strong><br>
+                    - pH neutre : Entre 6,0 et 7,0<br>
+                    - Sans cires ni silicones<br>
+                    - Formulation concentrée : Ratio 1:10 à 1:20<br>
+                    - Biodégradable
+                </div>
+            </div>
+        </div>
+
+        <!-- WASHING TECHNIQUE -->
+        <div class="page" id="washing">
+            <div class="lang-content active" id="washing-en">
+                <h2>Proper Washing Technique</h2>
+                <h3>Step-by-Step Washing Process</h3>
+                <ol class="step-list">
+                    <li><strong>Thorough Preliminary Rinse:</strong> The initial rinse constitutes the foundation of successful washing. Use a moderate pressure water jet to eliminate the coarsest surface contaminants. Always start from the top of the motorcycle and work downward.</li>
+                    
+                    <li><strong>Two-Bucket Method Application:</strong> This revolutionary technique guarantees scratch-free washing:
+                        <ul>
+                            <li>Immerse your wash mitt in the shampoo bucket</li>
+                            <li>Squeeze lightly to avoid excessive dripping</li>
+                            <li>Wash a maximum 30x30 cm section using linear movements</li>
+                            <li>Immediately rinse the mitt in the clear water bucket</li>
+                            <li>Vigorously agitate against the grit guard</li>
+                            <li>Repeat for the next section</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Pressure-Free Washing Technique:</strong> Use exclusively linear movements, never circular. Nano ceramic facilitates dirt removal, allowing a particularly gentle approach.</li>
+                    
+                    <li><strong>Meticulous Final Rinse:</strong> Proceed from top to bottom with a wide, uniform jet. Water should bead and evacuate quickly from all treated surfaces.</li>
+                </ol>
+            </div>
+
+            <div class="lang-content" id="washing-fr">
+                <h2>Technique de Lavage Appropriée</h2>
+                <h3>Processus de Lavage Étape par Étape</h3>
+                <ol class="step-list">
+                    <li><strong>Rinçage Préliminaire Approfondi :</strong> Le rinçage initial constitue la fondation d'un lavage réussi. Utilisez un jet d'eau à pression modérée pour éliminer les contaminants de surface les plus grossiers. Commencez toujours par le haut de la moto et descendez progressivement.</li>
+                    
+                    <li><strong>Application de la Méthode des Deux Seaux :</strong> Cette technique révolutionnaire garantit un lavage sans rayures :
+                        <ul>
+                            <li>Immergez votre gant de lavage dans le seau de shampoing</li>
+                            <li>Essorez légèrement pour éviter les coulures excessives</li>
+                            <li>Lavez une section de 30x30 cm maximum en mouvements linéaires</li>
+                            <li>Rincez immédiatement le gant dans le seau d'eau claire</li>
+                            <li>Agitez vigoureusement contre la grille de protection</li>
+                            <li>Répétez pour la section suivante</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Technique de Lavage Sans Pression :</strong> Utilisez exclusivement des mouvements linéaires, jamais circulaires. La nano-céramique facilite l'élimination de la saleté, permettant une approche particulièrement douce.</li>
+                    
+                    <li><strong>Rinçage Final Méticuleux :</strong> Procédez de haut en bas avec un jet large et uniforme. L'eau doit perler et s'évacuer rapidement de toutes les surfaces traitées.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- DRYING METHODS -->
+        <div class="page" id="drying">
+            <div class="lang-content active" id="drying-en">
+                <h2>Drying Methods</h2>
+                <h3>Optimal Drying Technique</h3>
+                <p><strong>Dedicated microfiber towel:</strong> Use exclusively a clean, dry microfiber towel reserved only for drying. This towel should never be used for other cleaning tasks.</p>
+                
+                <p><strong>Blotting method:</strong> Rather than rubbing or dragging the towel across the surface, use a gentle blotting technique. Place the towel on the surface and apply light pressure to absorb water.</p>
+                
+                <p><strong>Drying order:</strong> Follow the same order as washing, starting with upper parts and working downward.</p>
+                
+                <h3>Water Spot Prevention</h3>
+                <p>Water spots constitute the main enemy of a perfect finish. Preventive solutions:</p>
+                <ul>
+                    <li>Immediate drying after final rinse</li>
+                    <li>Use of demineralized water for final rinse</li>
+                    <li>Working in a shaded and temperate environment</li>
+                </ul>
+            </div>
+
+            <div class="lang-content" id="drying-fr">
+                <h2>Méthodes de Séchage</h2>
+                <h3>Technique de Séchage Optimal</h3>
+                <p><strong>Serviette en microfibre dédiée :</strong> Utilisez exclusivement une serviette en microfibre propre et sèche, réservée uniquement au séchage. Cette serviette ne doit jamais être utilisée pour d'autres tâches.</p>
+                
+                <p><strong>Méthode de tamponnage :</strong> Plutôt que de frotter ou de traîner la serviette, utilisez une technique de tamponnage délicat. Posez la serviette sur la surface et exercez une légère pression pour absorber l'eau.</p>
+                
+                <p><strong>Ordre de séchage :</strong> Suivez le même ordre que pour le lavage, en commençant par les parties hautes et en descendant progressivement.</p>
+                
+                <h3>Prévention des Traces d'Eau</h3>
+                <p>Les traces d'eau constituent l'ennemi principal d'un finish parfait. Solutions préventives :</p>
+                <ul>
+                    <li>Séchage immédiat après le rinçage final</li>
+                    <li>Utilisation d'eau déminéralisée pour le rinçage final</li>
+                    <li>Travail dans un environnement ombragé et tempéré</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRODUCTS TO AVOID -->
+        <div class="page" id="avoid">
+            <div class="lang-content active" id="avoid-en">
+                <h2>Products to Absolutely Avoid</h2>
+                <div class="warning">
+                    <strong>Prohibited Products</strong><br>
+                    These products can permanently damage your ceramic coating:
+                </div>
+                
+                <ul>
+                    <li><strong>Traditional waxes:</strong> Carnauba or synthetic waxes create an additional layer that masks ceramic coating properties.</li>
+                    <li><strong>Abrasive polishes:</strong> Any product containing abrasive agents can literally sand the ceramic coating.</li>
+                    <li><strong>Silicone-based products:</strong> Silicones create a film that interferes with the coating's natural properties.</li>
+                    <li><strong>Household detergents:</strong> Domestic cleaning products often contain extreme pH levels that can chemically degrade the coating.</li>
+                </ul>
+                
+                <div class="success">
+                    <strong>Compatible Maintenance Products</strong><br>
+                    Use only these approved products:
+                </div>
+                
+                <ul>
+                    <li><strong>Ceramic maintenance sprays:</strong> Specially formulated to complement and reinforce existing coating.</li>
+                    <li><strong>pH neutral shampoos:</strong> Formulated to clean effectively without altering the chemical structure.</li>
+                </ul>
+            </div>
+
+            <div class="lang-content" id="avoid-fr">
+                <h2>Produits à Éviter Absolument</h2>
+                <div class="warning">
+                    <strong>Produits Prohibés</strong><br>
+                    Ces produits peuvent endommager définitivement votre revêtement céramique :
+                </div>
+                
+                <ul>
+                    <li><strong>Cires traditionnelles :</strong> Les cires à base de carnauba ou synthétiques créent une couche supplémentaire qui masque les propriétés du revêtement céramique.</li>
+                    <li><strong>Polissoirs abrasifs :</strong> Tout produit contenant des agents abrasifs peut littéralement poncer le revêtement céramique.</li>
+                    <li><strong>Produits à base de silicone :</strong> Les silicones créent un film qui interfère avec les propriétés naturelles du revêtement.</li>
+                    <li><strong>Détergents ménagers :</strong> Les produits de nettoyage domestique contiennent souvent des pH extrêmes qui peuvent dégrader chimiquement le revêtement.</li>
+                </ul>
+                
+                <div class="success">
+                    <strong>Produits d'Entretien Compatibles</strong><br>
+                    Utilisez uniquement ces produits approuvés :
+                </div>
+                
+                <ul>
+                    <li><strong>Sprays d'entretien céramique :</strong> Spécialement formulés pour compléter et renforcer le revêtement existant.</li>
+                    <li><strong>Shampoings pH neutre :</strong> Formulés pour nettoyer efficacement sans altérer la structure chimique.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- WEEKLY INSPECTION -->
+        <div class="page" id="inspection">
+            <div class="lang-content active" id="inspection-en">
+                <h2>Weekly Inspection</h2>
+                <h3>Systematic Inspection Protocol</h3>
+                
+                <div class="success">
+                    <strong>Hydrophobicity evaluation:</strong> Spray a few water drops on different motorcycle areas. Water should immediately form perfectly round beads and roll easily on the surface.
+                </div>
+                
+                <div class="success">
+                    <strong>Visual shine inspection:</strong> Examine the surface under different lighting angles. Shine should be uniform and deep across the entire treated surface.
+                </div>
+                
+                <div class="success">
+                    <strong>Contaminant detection:</strong> Look for insect traces, tree sap, bird droppings, or industrial residues.
+                </div>
+                
+                <h3>Professional Intervention</h3>
+                <p>If your inspection reveals persistent anomalies, immediately contact Old Rider's Garage. Our expert team can evaluate your coating's condition and recommend appropriate interventions.</p>
+            </div>
+
+            <div class="lang-content" id="inspection-fr">
+                <h2>Inspection Hebdomadaire</h2>
+                <h3>Protocole d'Inspection Systématique</h3>
+                
+                <div class="success">
+                    <strong>Évaluation de l'hydrophobicité :</strong> Vaporisez quelques gouttes d'eau sur différentes zones de la moto. L'eau doit immédiatement former des perles parfaitement rondes et rouler facilement sur la surface.
+                </div>
+                
+                <div class="success">
+                    <strong>Inspection visuelle de la brillance :</strong> Examinez la surface sous différents angles d'éclairage. La brillance doit être uniforme et profonde sur toute la surface traitée.
+                </div>
+                
+                <div class="success">
+                    <strong>Détection des contaminants :</strong> Recherchez les traces d'insectes, de sève d'arbre, de fientes d'oiseaux ou de résidus industriels.
+                </div>
+                
+                <h3>Intervention Professionnelle</h3>
+                <p>Si votre inspection révèle des anomalies persistantes, contactez immédiatement Old Rider's Garage. Notre équipe d'experts peut évaluer l'état de votre revêtement et recommander les interventions appropriées.</p>
+            </div>
+        </div>
+
+        <!-- BENEFITS -->
+        <div class="page" id="benefits">
+            <div class="lang-content active" id="benefits-en">
+                <h2>Benefits of Ceramic Coating</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🛡️</span>
+                        <h3>Complete Environmental Protection</h3>
+                        <p>Advanced UV protection: Titanium dioxide nanoparticles integrated in the coating act as permanent sunscreen, blocking 99% of harmful UV rays.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🧼</span>
+                        <h3>Maintenance Facilitation</h3>
+                        <p>Self-cleaning effect: Hydrophobic properties allow rainwater to naturally carry away most surface contaminants.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">💰</span>
+                        <h3>Investment Enhancement</h3>
+                        <p>Resale value preservation: A protected motorcycle maintains its new appearance longer.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">⚡</span>
+                        <h3>Time Savings</h3>
+                        <p>Cleaning time reduction: Contaminants hardly adhere, allowing cleaning up to 70% faster.</p>
+                    </div>
+                </div>
+
+                <h3>Chemical Resistance</h3>
+                <p>The coating forms an impermeable barrier to chemical contaminants: acid rain, industrial pollution, de-icing salt.</p>
+                
+                <h3>Long-term Savings</h3>
+                <p>Eliminating the need for regular waxing and reducing polishing interventions saves both time and money while maintaining superior protection.</p>
+            </div>
+
+            <div class="lang-content" id="benefits-fr">
+                <h2>Avantages du Traitement Céramique</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🛡️</span>
+                        <h3>Protection Environnementale Complète</h3>
+                        <p>Protection UV avancée : Les nanoparticules de dioxyde de titane intégrées dans le revêtement agissent comme un écran solaire permanent, bloquant 99% des rayons UV nocifs.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🧼</span>
+                        <h3>Facilitation de l'Entretien</h3>
+                        <p>Effet autonettoyant : Les propriétés hydrophobes permettent à l'eau de pluie d'emporter naturellement une grande partie des contaminants de surface.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">💰</span>
+                        <h3>Valorisation de l'Investissement</h3>
+                        <p>Préservation de la valeur de revente : Une moto protégée conserve son aspect neuf plus longtemps.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon">⚡</span>
+                        <h3>Gain de Temps</h3>
+                        <p>Réduction du temps de nettoyage : Les contaminants adhèrent difficilement, permettant un nettoyage jusqu'à 70% plus rapide.</p>
+                    </div>
+                </div>
+
+                <h3>Résistance Chimique</h3>
+                <p>Le revêtement forme une barrière imperméable aux contaminants chimiques : pluies acides, pollution industrielle, sel de déneigement.</p>
+                
+                <h3>Économies à Long Terme</h3>
+                <p>Élimination du besoin de cirage régulier et réduction des interventions de polissage permettent d'économiser temps et argent tout en maintenant une protection supérieure.</p>
+            </div>
+        </div>
+
+        <!-- INVESTMENT ANALYSIS -->
+        <div class="page" id="investment">
+            <div class="lang-content active" id="investment-en">
+                <h2>Investment Analysis & ROI</h2>
+                <h3>Why Nano Ceramic is a Smart Investment</h3>
+                <p>See the real financial impact of ceramic coating over 5 years compared to traditional maintenance methods:</p>
+                
+                <!-- Cost Comparison Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title">5-Year Maintenance Cost Comparison</h3>
+                    <div class="cost-chart">
+                        <div class="chart-bar-container">
+                            <div class="chart-label">Traditional Maintenance</div>
+                            <div class="chart-bar traditional">
+                                <div class="bar-fill" data-value="3500"></div>
+                                <span class="bar-value">$3,500</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar-container">
+                            <div class="chart-label">With Ceramic Coating</div>
+                            <div class="chart-bar ceramic">
+                                <div class="bar-fill" data-value="1800"></div>
+                                <span class="bar-value">$1,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savings-highlight">
+                        <span class="savings-amount">$1,700</span>
+                        <span class="savings-text">Total Savings Over 5 Years</span>
+                    </div>
+                </div>
+
+                <!-- Time Savings Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title">Time Investment Comparison (Annual Hours)</h3>
+                    <div class="time-chart">
+                        <div class="time-comparison">
+                            <div class="time-block traditional-time">
+                                <div class="time-icon">⏱️</div>
+                                <div class="time-number">48</div>
+                                <div class="time-label">Hours/Year Traditional</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="time-block ceramic-time">
+                                <div class="time-icon">✨</div>
+                                <div class="time-number">15</div>
+                                <div class="time-label">Hours/Year Ceramic</div>
+                            </div>
+                        </div>
+                        <div class="time-savings">
+                            Save 33 hours annually = More time riding!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protection Comparison -->
+                <div class="protection-comparison">
+                    <h3>Protection Level Comparison</h3>
+                    <div class="protection-grid">
+                        <div class="protection-item">
+                            <h4>UV Protection</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Traditional Wax</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 30%"></div></div>
+                                    <span>30%</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Ceramic Coating</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 99%"></div></div>
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protection-item">
+                            <h4>Chemical Resistance</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Traditional Wax</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 25%"></div></div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Ceramic Coating</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 95%"></div></div>
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protection-item">
+                            <h4>Durability</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Traditional Wax</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 20%"></div></div>
+                                    <span>2-3 months</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Ceramic Coating</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 100%"></div></div>
+                                    <span>2-5 years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="roi-calculator">
+                    <h3>Return on Investment Calculator</h3>
+                    <div class="roi-breakdown">
+                        <div class="roi-item">
+                            <div class="roi-icon">💰</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Initial Investment</div>
+                                <div class="roi-value">$600 - $1,200</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item">
+                            <div class="roi-icon">📈</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Annual Savings</div>
+                                <div class="roi-value">$340 - $450</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item">
+                            <div class="roi-icon">⚡</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Break-even Point</div>
+                                <div class="roi-value">18-24 months</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item highlight">
+                            <div class="roi-icon">🎯</div>
+                            <div class="roi-content">
+                                <div class="roi-title">5-Year ROI</div>
+                                <div class="roi-value">+150% to +200%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-content" id="investment-fr">
+                <h2>Analyse d'Investissement & ROI</h2>
+                <h3>Pourquoi la Nano Céramique est un Investissement Intelligent</h3>
+                <p>Voyez l'impact financier réel du revêtement céramique sur 5 ans comparé aux méthodes d'entretien traditionnelles :</p>
+                
+                <!-- Cost Comparison Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title">Comparaison des Coûts d'Entretien sur 5 Ans</h3>
+                    <div class="cost-chart">
+                        <div class="chart-bar-container">
+                            <div class="chart-label">Entretien Traditionnel</div>
+                            <div class="chart-bar traditional">
+                                <div class="bar-fill" data-value="3500"></div>
+                                <span class="bar-value">$3,500</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar-container">
+                            <div class="chart-label">Avec Revêtement Céramique</div>
+                            <div class="chart-bar ceramic">
+                                <div class="bar-fill" data-value="1800"></div>
+                                <span class="bar-value">$1,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savings-highlight">
+                        <span class="savings-amount">$1,700</span>
+                        <span class="savings-text">Économies Totales sur 5 Ans</span>
+                    </div>
+                </div>
+
+                <!-- Time Savings Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title">Comparaison du Temps Investi (Heures Annuelles)</h3>
+                    <div class="time-chart">
+                        <div class="time-comparison">
+                            <div class="time-block traditional-time">
+                                <div class="time-icon">⏱️</div>
+                                <div class="time-number">48</div>
+                                <div class="time-label">Heures/An Traditionnel</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="time-block ceramic-time">
+                                <div class="time-icon">✨</div>
+                                <div class="time-number">15</div>
+                                <div class="time-label">Heures/An Céramique</div>
+                            </div>
+                        </div>
+                        <div class="time-savings">
+                            Économisez 33 heures par an = Plus de temps pour rouler !
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protection Comparison -->
+                <div class="protection-comparison">
+                    <h3>Comparaison des Niveaux de Protection</h3>
+                    <div class="protection-grid">
+                        <div class="protection-item">
+                            <h4>Protection UV</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Cire Traditionnelle</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 30%"></div></div>
+                                    <span>30%</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Revêtement Céramique</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 99%"></div></div>
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protection-item">
+                            <h4>Résistance Chimique</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Cire Traditionnelle</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 25%"></div></div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Revêtement Céramique</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 95%"></div></div>
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protection-item">
+                            <h4>Durabilité</h4>
+                            <div class="protection-bars">
+                                <div class="protection-bar">
+                                    <span>Cire Traditionnelle</span>
+                                    <div class="bar-bg"><div class="bar-progress" style="width: 20%"></div></div>
+                                    <span>2-3 mois</span>
+                                </div>
+                                <div class="protection-bar ceramic-bar">
+                                    <span>Revêtement Céramique</span>
+                                    <div class="bar-bg"><div class="bar-progress ceramic" style="width: 100%"></div></div>
+                                    <span>2-5 ans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="roi-calculator">
+                    <h3>Calculateur de Retour sur Investissement</h3>
+                    <div class="roi-breakdown">
+                        <div class="roi-item">
+                            <div class="roi-icon">💰</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Investissement Initial</div>
+                                <div class="roi-value">$600 - $1,200</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item">
+                            <div class="roi-icon">📈</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Économies Annuelles</div>
+                                <div class="roi-value">$340 - $450</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item">
+                            <div class="roi-icon">⚡</div>
+                            <div class="roi-content">
+                                <div class="roi-title">Seuil de Rentabilité</div>
+                                <div class="roi-value">18-24 mois</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-item highlight">
+                            <div class="roi-icon">🎯</div>
+                            <div class="roi-content">
+                                <div class="roi-title">ROI sur 5 Ans</div>
+                                <div class="roi-value">+150% à +200%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERT TIPS -->
+        <div class="page" id="tips">
+            <div class="lang-content active" id="tips-en">
+                <h2>Expert Tips</h2>
+                <h3>Washing Condition Optimization</h3>
+                <p><strong>Time planning:</strong> Absolutely avoid washing during the hottest hours. Ideal conditions: early morning or late afternoon.</p>
+                <p><strong>Surface temperature management:</strong> Check that bodywork isn't hot to touch before starting.</p>
+                
+                <h3>Preventive Professional Maintenance</h3>
+                <div class="success">
+                    <strong>Recommended frequency:</strong><br>
+                    - Daily use motorcycles: maintenance every 6 months<br>
+                    - Occasional use: annual maintenance
+                </div>
+                
+                <h3>Old Rider's Garage Services:</h3>
+                <ul>
+                    <li>Deep decontamination</li>
+                    <li>Coating condition evaluation</li>
+                    <li>Reinforcement layer application</li>
+                    <li>Personalized advice</li>
+                </ul>
+                
+                <h3>Seasonal Adaptation</h3>
+                <p><strong>Winter:</strong> Increase washing frequency to quickly eliminate de-icing salt.</p>
+                <p><strong>Summer:</strong> Protect your motorcycle from prolonged parking in full sun.</p>
+            </div>
+
+            <div class="lang-content" id="tips-fr">
+                <h2>Conseils d'Expert</h2>
+                <h3>Optimisation des Conditions de Lavage</h3>
+                <p><strong>Planification temporelle :</strong> Évitez absolument le lavage pendant les heures les plus chaudes. Conditions idéales : tôt le matin ou en fin d'après-midi.</p>
+                <p><strong>Gestion de la température de surface :</strong> Vérifiez que la carrosserie n'est pas chaude au toucher avant de commencer.</p>
+                
+                <h3>Maintenance Professionnelle Préventive</h3>
+                <div class="success">
+                    <strong>Fréquence recommandée :</strong><br>
+                    - Motos utilisées quotidiennement : entretien tous les 6 mois<br>
+                    - Usage occasionnel : entretien annuel
+                </div>
+                
+                <h3>Services Old Rider's Garage :</h3>
+                <ul>
+                    <li>Décontamination en profondeur</li>
+                    <li>Évaluation de l'état du revêtement</li>
+                    <li>Application de couches de renforcement</li>
+                    <li>Conseils personnalisés</li>
+                </ul>
+                
+                <h3>Adaptation Saisonnière</h3>
+                <p><strong>Hiver :</strong> Augmentez la fréquence de lavage pour éliminer rapidement le sel de déneigement.</p>
+                <p><strong>Été :</strong> Protégez votre moto du stationnement prolongé en plein soleil.</p>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="page" id="contact">
+            <div class="lang-content active" id="contact-en">
+                <h2>Contact and Services</h2>
+                <div class="contact-info">
+                    <h3>OLD RIDER'S GARAGE - Your Trusted Partner</h3>
+                    
+                    <p>At Old Rider's Garage, we understand that your passion for motorcycles deserves the best. Our expertise, developed over years serving Harley Davidson, Indian, custom motorcycle, Kawasaki, and BMW owners, allows us to offer tailored solutions.</p>
+                    
+                    <h3>Our Specialized Services</h3>
+                    <div class="contact-item"><strong>Ceramic coating application:</strong> Professional multi-step process guaranteeing optimal adhesion and maximum durability.</div>
+                    <div class="contact-item"><strong>Chrome treatment:</strong> Specialized nano ceramic treatment for chrome surfaces, ensuring long-lasting shine and protection.</div>
+                    <div class="contact-item"><strong>Care and maintenance:</strong> Personalized maintenance programs according to your motorcycle type and usage.</div>
+                    <div class="contact-item"><strong>Diagnosis and repair:</strong> Professional evaluation of your coating condition and corrective interventions.</div>
+                    <div class="contact-item"><strong>Training and advice:</strong> We share our expertise to help you maintain your motorcycle in the best conditions.</div>
+                    
+                    <div class="mobile-service-highlight">
+                        <h3>🚐 Mobile Service - We Come to You!</h3>
+                        <p>Our fully equipped Sprinter van brings professional ceramic coating services directly to your location. Whether at home, office, or garage - we provide the same premium quality service wherever you are!</p>
+                        <div class="mobile-benefits">
+                            <div class="mobile-benefit">✅ Fully equipped mobile workshop</div>
+                            <div class="mobile-benefit">✅ Professional tools and environment</div>
+                            <div class="mobile-benefit">✅ Same premium quality as our garage</div>
+                            <div class="mobile-benefit">✅ Convenient scheduling at your location</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Our Quality Commitment</h3>
+                    <p style="font-style: italic; font-size: 1.3rem; margin: 20px 0;">"Our service is so exceptional that we even teach you how to take care of your motorcycle!"</p>
+                    
+                    <h3>Contact Information</h3>
+                    <div class="contact-item"><strong>Phone:</strong> (438) 831-3136 ou (438) 522-6899</div>
+                    <div class="contact-item"><strong>Email:</strong> oldridersgarage@gmail.com</div>
+                    <div class="contact-item"><strong>Website:</strong> www.oldriders.shop</div>
+                    <div class="contact-item"><strong>Facebook:</strong> https://www.facebook.com/ridersgc/</div>
+                    <div class="contact-item"><strong>Instagram:</strong> @oldridersgarage</div>
+                    
+                    <div style="margin-top: 40px; padding: 20px; background: rgba(255,107,53,0.2); border-radius: 10px;">
+                        <h3 style="color: white;">Schedule your appointment today</h3>
+                        <p style="font-size: 1.5rem; font-weight: bold; margin-top: 10px;">Ride more, clean less!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-content" id="contact-fr">
+                <h2>Contact et Services</h2>
+                <div class="contact-info">
+                    <h3>OLD RIDER'S GARAGE - Votre Partenaire de Confiance</h3>
+                    
+                    <p>Chez Old Rider's Garage, nous comprenons que votre passion pour les motos mérite le meilleur. Notre expertise, développée au fil des années au service des propriétaires de Harley Davidson, Indian, motos custom, Kawasaki et BMW, nous permet d'offrir des solutions sur mesure.</p>
+                    
+                    <h3>Nos Services Spécialisés</h3>
+                    <div class="contact-item"><strong>Application de revêtement céramique :</strong> Processus professionnel en plusieurs étapes garantissant une adhérence optimale et une durabilité maximale.</div>
+                    <div class="contact-item"><strong>Traitement de chrome :</strong> Traitement nano céramique spécialisé pour les surfaces chromées, assurant une brillance et une protection durables.</div>
+                    <div class="contact-item"><strong>Entretien et maintenance :</strong> Programmes d'entretien personnalisés selon votre type de moto et votre usage.</div>
+                    <div class="contact-item"><strong>Diagnostic et réparation :</strong> Évaluation professionnelle de l'état de votre revêtement et interventions correctives.</div>
+                    <div class="contact-item"><strong>Formation et conseils :</strong> Nous partageons notre expertise pour vous permettre de maintenir votre moto dans les meilleures conditions.</div>
+                    
+                    <div class="mobile-service-highlight">
+                        <h3>🚐 Service Mobile - Nous Venons Chez Vous !</h3>
+                        <p>Notre Sprinter entièrement équipée apporte les services professionnels de revêtement céramique directement chez vous. Que ce soit à domicile, au bureau ou dans votre garage - nous offrons la même qualité premium où que vous soyez !</p>
+                        <div class="mobile-benefits">
+                            <div class="mobile-benefit">✅ Atelier mobile entièrement équipé</div>
+                            <div class="mobile-benefit">✅ Outils et environnement professionnels</div>
+                            <div class="mobile-benefit">✅ Même qualité premium qu'à notre garage</div>
+                            <div class="mobile-benefit">✅ Planification pratique à votre emplacement</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Notre Engagement Qualité</h3>
+                    <p style="font-style: italic; font-size: 1.3rem; margin: 20px 0;">"Notre service est si exceptionnel que nous vous apprenons même à prendre soin de votre moto !"</p>
+                    
+                    <h3>Informations de Contact</h3>
+                    <div class="contact-item"><strong>Téléphone :</strong> (438) 831-3136 ou (438) 522-6899</div>
+                    <div class="contact-item"><strong>Courriel :</strong> oldridersgarage@gmail.com</div>
+                    <div class="contact-item"><strong>Site Web :</strong> www.oldriders.shop</div>
+                    <div class="contact-item"><strong>Facebook :</strong> https://www.facebook.com/ridersgc/</div>
+                    <div class="contact-item"><strong>Instagram :</strong> @oldridersgarage</div>
+                    
+                    <div style="margin-top: 40px; padding: 20px; background: rgba(255,107,53,0.2); border-radius: 10px;">
+                        <h3 style="color: white;">Prenez rendez-vous dès aujourd'hui</h3>
+                        <p style="font-size: 1.5rem; font-weight: bold; margin-top: 10px;">Roulez plus, nettoyez moins !</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <div class="lang-content active" id="footer-en">
+                    <p style="color: #666; font-style: italic;">Guide written by the Old Rider's Garage expert team</p>
+                </div>
+                <div class="lang-content" id="footer-fr">
+                    <p style="color: #666; font-style: italic;">Guide rédigé par l'équipe d'experts Old Rider's Garage</p>
+                </div>
+                <p style="color: #999; margin-top: 10px;">© 2024 Old Rider's Garage. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            console.log('Switching to language:', lang);
+            
+            // Hide all language content
+            const allLangElements = document.querySelectorAll('.lang-content');
+            allLangElements.forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show content for selected language
+            const selectedElements = document.querySelectorAll('.lang-content[id*="-' + lang + '"]');
+            selectedElements.forEach(el => {
+                el.classList.add('active');
+            });
+            
+            // Update button states
+            document.querySelectorAll('.language-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Print function
+        function printEbook() {
+            window.print();
+        }
+
+        // Initialize with English on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, initializing language toggle');
+            switchLanguage('en');
+            
+            // Animate charts after page load
+            setTimeout(() => {
+                const bars = document.querySelectorAll('.bar-progress');
+                bars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
